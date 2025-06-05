@@ -1,6 +1,5 @@
 ﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
-
 CREATE PROCEDURE [dbo].[DegUpgFinalcountQuery]
 AS
 BEGIN
@@ -28,6 +27,8 @@ and InitialAssetClassAlt_Key = 1
 and UpgDate  between '2021-07-01' and  '2021-07-31'
 group by UpgDate
 order by UpgDate
+
+/*TEST BRACH*/
 
 ---------------------Degrade report
 exec [dbo].[rpt-026] '01/08/2021','26/08/2021',1
