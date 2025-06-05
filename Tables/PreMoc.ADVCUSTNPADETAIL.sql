@@ -1,0 +1,30 @@
+﻿CREATE TABLE [PreMoc].[ADVCUSTNPADETAIL] (
+  [CustomerEntityId] [int] NOT NULL,
+  [Cust_AssetClassAlt_Key] [smallint] NULL,
+  [NPADt] [date] NULL,
+  [LastInttChargedDt] [date] NULL,
+  [DbtDt] [date] NULL,
+  [LosDt] [date] NULL,
+  [DefaultReason1Alt_Key] [smallint] NULL,
+  [DefaultReason2Alt_Key] [smallint] NULL,
+  [StaffAccountability] [char](1) NULL,
+  [LastIntBooked] [date] NULL,
+  [RefCustomerID] [varchar](20) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NOT NULL,
+  [EffectiveToTimeKey] [int] NOT NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [date] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [date] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [date] NULL,
+  [MocStatus] [char](1) NULL,
+  [MocDate] [date] NULL,
+  [MocTypeAlt_Key] [int] NULL,
+  [NPA_Reason] [varchar](1000) NULL,
+  [ENTITYKEY] [int] IDENTITY,
+  [d2ktimestamp] [datetime] NULL
+)
+ON [PRIMARY]
+GO

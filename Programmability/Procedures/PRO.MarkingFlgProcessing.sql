@@ -1,0 +1,50 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+
+/*==========================================
+
+AUTHER : SANJEEV KUMAR SHARMA
+
+alter DATE : 04-04-2018
+
+MODIFY DATE : 04-04-2018
+
+DESCRIPTION : MARKING OF FLG PROCESSING
+
+--EXEC [PRO].[MarkingFlgProcessing]  26267
+
+==============================================*/
+
+CREATE PROCEDURE [PRO].[MarkingFlgProcessing]
+
+@TIMEKEY INT
+
+AS
+
+BEGIN
+
+BEGIN TRY
+
+UPDATE PRO.CUSTOMERCAL
+
+SET FlgProcessing='Y'
+
+WHERE (EffectiveFromTimeKey<=@TIMEKEY AND EffectiveTOTimeKey>=@TIMEKEY)
+
+END TRY
+
+BEGIN CATCH
+
+ 
+
+SELECT 'ERROR PROCEDURE :'+ERROR_PROCEDURE()+' ERROR MESSAGE:'+ERROR_MESSAGE()
+
+ 
+
+END CATCH
+
+END
+
+ 
+
+GO

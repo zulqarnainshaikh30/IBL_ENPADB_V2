@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[DimAssetclassMapping_Mod] (
+  [EntityKey] [int] IDENTITY,
+  [AssetClassMappingAlt_Key] [int] NULL,
+  [SrcSysClassCode] [varchar](30) NULL,
+  [SrcSysClassName] [varchar](100) NULL,
+  [AssetClassAlt_Key] [int] NULL,
+  [AssetClassName] [varchar](100) NULL,
+  [AssetClassShortName] [varchar](30) NULL,
+  [AssetClassShortNameEnum] [varchar](30) NULL,
+  [AssetClassGroup] [varchar](50) NULL,
+  [AssetClassSubGroup] [varchar](50) NULL,
+  [DPD_LowerValue] [int] NULL,
+  [DPD_HigherValue] [int] NULL,
+  [NPAAgeingBucket] [varchar](50) NULL,
+  [BankSecuredNorms] [int] NULL,
+  [BankUnsecuredNorms] [int] NULL,
+  [RBISecuredNorms] [int] NULL,
+  [RBIUnsecuredNorms] [int] NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](30) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifiedBy] [varchar](30) NULL,
+  [DateModifie] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](30) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [SourceAlt_Key] [int] NULL,
+  [Changefields] [varchar](100) NULL,
+  [SrcSysGroup] [varchar](10) NULL
+)
+ON [PRIMARY]
+GO

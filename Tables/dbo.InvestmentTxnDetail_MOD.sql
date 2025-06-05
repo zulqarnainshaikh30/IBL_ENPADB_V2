@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[InvestmentTxnDetail_MOD] (
+  [EntityKey] [int] IDENTITY,
+  [InstrumentEntityID] [int] NULL,
+  [TxnEntityID] [int] NULL,
+  [AcqModeAlt_Key] [smallint] NULL,
+  [AcqDt] [date] NULL,
+  [AcqType] [char](1) NULL,
+  [AcqUnit] [decimal](18, 2) NULL,
+  [AcqUnitPrice] [decimal](8, 4) NULL,
+  [CurrConvRt] [decimal](16, 4) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [D2Ktimestamp] [timestamp],
+  [ChangeFields] [varchar](100) NULL,
+  [CurrCode] [varchar](50) NULL,
+  [AcqCost] [int] NULL,
+  [BookValue] [decimal](16, 2) NULL,
+  [ExpenditurePaid] [decimal](16, 2) NULL,
+  [Interestreceived] [decimal](16, 2) NULL,
+  [Exp_Paid] [decimal](16, 2) NULL,
+  [Inttrecieved] [decimal](16, 2) NULL,
+  [MenuID] [int] NULL
+)
+ON [PRIMARY]
+GO

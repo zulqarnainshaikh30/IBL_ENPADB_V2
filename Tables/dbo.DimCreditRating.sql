@@ -1,0 +1,30 @@
+﻿CREATE TABLE [dbo].[DimCreditRating] (
+  [CreditRating_Key] [smallint] NOT NULL,
+  [CreditRatingAlt_Key] [smallint] NULL,
+  [CreditRatingOrderKey] [tinyint] NULL,
+  [CreditRatingName] [varchar](50) NULL,
+  [CreditRatingShortName] [varchar](20) NULL,
+  [CreditRatingShortNameEnum] [varchar](20) NULL,
+  [CreditRatingGroup] [varchar](50) NULL,
+  [CreditRatingSubGroup] [varchar](50) NULL,
+  [CreditRatingSegment] [varchar](50) NULL,
+  [CreditRatingValidCode] [char](1) NULL,
+  [CreditScoreLowerValue] [smallint] NULL,
+  [CreditScoreUpperValue] [smallint] NULL,
+  [OldCreditRatingShortNameEnum] [varchar](20) NULL,
+  [SrcSysCreditRatingCode] [varchar](10) NULL,
+  [SrcSysCreditRatingName] [varchar](50) NULL,
+  [DestSysCreditRatingCode] [varchar](10) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModifie] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp]
+)
+ON [PRIMARY]
+GO

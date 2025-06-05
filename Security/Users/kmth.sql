@@ -1,0 +1,3 @@
+﻿CREATE USER [kmth]
+  WITHOUT LOGIN
+GO

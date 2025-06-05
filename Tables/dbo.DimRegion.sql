@@ -1,0 +1,38 @@
+﻿CREATE TABLE [dbo].[DimRegion] (
+  [Region_Key] [smallint] NOT NULL,
+  [RegionAlt_Key] [varchar](10) NOT NULL,
+  [RegionName] [varchar](50) NOT NULL,
+  [RegionShortName] [varchar](20) NULL,
+  [RegionShortNameEnum] [varchar](20) NULL,
+  [RegionGroup] [varchar](50) NULL,
+  [RegionSubGroup] [varchar](50) NULL,
+  [RegionSegment] [varchar](50) NULL,
+  [RegionValidCode] [char](1) NULL,
+  [ZoneAlt_Key] [smallint] NOT NULL,
+  [ZoneName] [varchar](50) NULL,
+  [RBI_Part_1] [varchar](7) NULL,
+  [RBI_Part_2] [varchar](7) NULL,
+  [SrcSysRegionCode] [varchar](50) NULL,
+  [SrcSysRegionName] [varchar](50) NULL,
+  [DestSysRegionCode] [varchar](10) NULL,
+  [RegionNameHindi] [nvarchar](50) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp],
+  [BranchLoop] [char](1) NULL,
+  [regional_Head_EmailId] [varchar](200) NULL,
+  [DeputyRegional_Head_EmailId] [varchar](200) NULL,
+  [ContactPersonId] [varchar](20) NULL,
+  [ChangeFields] [varchar](max) NULL,
+  [RegionCode] [varchar](100) NULL
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

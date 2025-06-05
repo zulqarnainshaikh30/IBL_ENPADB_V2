@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[DimProvision_Seg_Mod] (
+  [EntityKey] [int] IDENTITY,
+  [Provision_Key] [smallint] NULL,
+  [ProvisionAlt_Key] [smallint] NULL,
+  [Segment] [varchar](20) NULL,
+  [ProvisionRule] [varchar](20) NULL,
+  [SecurityApplicable] [char](1) NULL,
+  [ProductAlt_Key] [varchar](20) NULL,
+  [ProvisionName] [varchar](255) NULL,
+  [ProvisionShortNameEnum] [varchar](255) NULL,
+  [ProvisionSecured] [decimal](10, 4) NULL,
+  [ProvisionUnSecured] [decimal](10, 4) NULL,
+  [LowerDPD] [int] NULL,
+  [UpperDPD] [int] NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NOT NULL,
+  [EffectiveToTimeKey] [int] NOT NULL,
+  [EffectiveFromDate] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [DB1_PROV] [decimal](18, 2) NULL,
+  [DB2_PROV] [decimal](18, 2) NULL,
+  [ProvProductCat] [varchar](255) NULL,
+  [RBIProvisionSecured] [decimal](10, 4) NULL,
+  [RBIProvisionUnSecured] [decimal](10, 4) NULL,
+  [AdditionalprovisionRBINORMS] [varchar](30) NULL
+)
+ON [PRIMARY]
+GO

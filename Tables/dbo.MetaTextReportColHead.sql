@@ -1,0 +1,37 @@
+﻿CREATE TABLE [dbo].[MetaTextReportColHead] (
+  [Column_Key] [smallint] NULL,
+  [ColumnAlt_Key] [smallint] NULL,
+  [ColoumnOrder_Key] [smallint] NULL,
+  [ColoumnRowIndex] [smallint] NULL,
+  [ColumnName] [varchar](max) NULL,
+  [ColumnHeader] [varchar](max) NULL,
+  [ColumnSep] [char](2) NULL,
+  [ColumnGroupSep] [char](2) NULL,
+  [RowSep] [char](1) NULL,
+  [RowGroupSep] [char](1) NULL,
+  [UseColumnWidth] [char](1) NULL,
+  [ColumnWidth] [smallint] NULL,
+  [DataType] [varchar](10) NULL,
+  [DataFormat] [varchar](10) NULL,
+  [ColumnAlign] [char](1) NULL,
+  [RowSum] [char](1) NULL,
+  [AllowSpace] [char](1) NULL,
+  [UseAllowSpaceForTtl] [char](1) NULL,
+  [ColSum] [char](1) NULL,
+  [SplitReq] [char](1) NULL,
+  [ReportMenuId] [smallint] NULL,
+  [ColumnValidCode] [char](1) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModifie] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [D2Ktimestamp] [timestamp]
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

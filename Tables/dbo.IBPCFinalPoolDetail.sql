@@ -1,0 +1,36 @@
+﻿CREATE TABLE [dbo].[IBPCFinalPoolDetail] (
+  [SummaryID] [int] NULL,
+  [PoolID] [varchar](max) NULL,
+  [PoolName] [varchar](max) NULL,
+  [CustomerID] [varchar](max) NULL,
+  [AccountID] [varchar](max) NULL,
+  [AuthorisationStatus] [varchar](20) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](100) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifyBy] [varchar](100) NULL,
+  [DateModified] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](100) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [D2Ktimestamp] [timestamp],
+  [ChangeFields] [varchar](100) NULL,
+  [EntityKey] [int] IDENTITY,
+  [POS] [decimal](18, 2) NULL,
+  [InterestReceivable] [decimal](18, 2) NULL,
+  [SourceAlt_Key] [int] NULL,
+  [SourceName] [varchar](30) NULL,
+  [CustomerName] [varchar](200) NULL,
+  [FlagAlt_Key] [varchar](30) NULL,
+  [AccountBalance] [decimal](18, 2) NULL,
+  [ExposureAmount] [decimal](18, 2) NULL,
+  [Remark] [varchar](250) NULL,
+  [IBPCOutDate] [date] NULL,
+  [IBPCInDate] [date] NULL,
+  [PoolType] [varchar](30) NULL,
+  [MaturityDate] [date] NULL,
+  [IBPCMarkingDate] [date] NULL
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

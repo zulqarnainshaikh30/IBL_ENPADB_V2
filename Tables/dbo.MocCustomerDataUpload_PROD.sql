@@ -1,0 +1,35 @@
+﻿CREATE TABLE [dbo].[MocCustomerDataUpload_PROD] (
+  [Entity_Key] [int] IDENTITY,
+  [SrNo] [varchar](max) NULL,
+  [AccountID] [varchar](max) NULL,
+  [RestructureFacility] [varchar](max) NULL,
+  [RevisedBusinessSeg] [varchar](max) NULL,
+  [DisbursementDate] [varchar](max) NULL,
+  [ReferenceDate] [varchar](max) NULL,
+  [InvocationDate] [varchar](max) NULL,
+  [DateofConversionintoEquity] [varchar](max) NULL,
+  [PrinRpymntStartDate] [varchar](max) NULL,
+  [InttRpymntStartDate] [varchar](max) NULL,
+  [AssetClassatRstrctr] [varchar](max) NULL,
+  [NPADate] [varchar](max) NULL,
+  [NPAQuarter] [varchar](max) NULL,
+  [TypeofRestructuring] [varchar](max) NULL,
+  [CovidMoratoriamMSME] [varchar](max) NULL,
+  [CovidOTRCategory] [varchar](max) NULL,
+  [BankingRelationship] [varchar](max) NULL,
+  [DateofRestructuring] [varchar](max) NULL,
+  [RestructuringApprovingAuth] [varchar](max) NULL,
+  [DateofIstDefaultonCRILIC] [varchar](max) NULL,
+  [ReportingBank] [varchar](max) NULL,
+  [DateofSigningICA] [varchar](max) NULL,
+  [OSasonDateofRstrctr] [varchar](max) NULL,
+  [POSasonDateofRstrctr] [varchar](max) NULL,
+  [InvestmentGrade] [varchar](max) NULL,
+  [CreditProvisionRs] [varchar](max) NULL,
+  [DFVProvisionRs] [varchar](max) NULL,
+  [MTMProvisionRs] [varchar](max) NULL,
+  [filname] [varchar](max) NULL
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

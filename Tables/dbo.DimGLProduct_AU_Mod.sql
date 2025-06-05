@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[DimGLProduct_AU_Mod] (
+  [EntityKey] [int] IDENTITY,
+  [SourceAlt_key] [int] NULL,
+  [GLProductAlt_Key] [smallint] NULL,
+  [ProductCode] [varchar](30) NULL,
+  [ProductName] [varchar](200) NULL,
+  [AssetGLCode_STD] [varchar](30) NULL,
+  [AssetGLCode_NPA] [varchar](30) NULL,
+  [InterestSuspenseNormal] [varchar](30) NULL,
+  [InterestReceivableNormal] [varchar](30) NULL,
+  [InterestIncomeNormal] [varchar](30) NULL,
+  [SuspendedInterestNormal] [varchar](30) NULL,
+  [InterestSuspensePenal] [varchar](30) NULL,
+  [InterestReceivablePenal] [varchar](30) NULL,
+  [InterestIncomePenal] [varchar](30) NULL,
+  [SuspendedInterestPenal] [varchar](30) NULL,
+  [Prov_Dr_GL] [varchar](30) NULL,
+  [Prov_Cr_GL] [varchar](30) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [ChangeFields] [varchar](100) NULL,
+  [ApprovedByFirstLevel] [varchar](30) NULL,
+  [DateApprovedFirstLevel] [datetime] NULL
+)
+ON [PRIMARY]
+GO

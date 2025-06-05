@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[DimSubSectorMappingMaster_Mod] (
+  [EntityKey] [int] IDENTITY,
+  [SubSectorMappingAlt_Key] [int] NULL,
+  [SubSectorAlt_Key] [int] NULL,
+  [SourceAlt_Key] [int] NULL,
+  [SubSectorNameOrderKey] [tinyint] NULL,
+  [SubSectorName] [varchar](50) NULL,
+  [SubSectorShortName] [varchar](20) NULL,
+  [SubSectorShortNameEnum] [varchar](20) NULL,
+  [SubSectorGroup] [varchar](50) NULL,
+  [SubSectorSubGroup] [varchar](50) NULL,
+  [SubSectorSegment] [varchar](50) NULL,
+  [SubSectorValidCode] [char](1) NULL,
+  [CIBILBusinessCategory] [varchar](10) NULL,
+  [SrcSysSubSectorCode] [varchar](50) NULL,
+  [SrcSysSubSectorName] [varchar](50) NULL,
+  [DestSysSubSectorCode] [varchar](10) NULL,
+  [DestSysSectorCode] [varchar](10) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [Changes] [varchar](500) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp],
+  [Remarks] [varchar](500) NULL
+)
+ON [PRIMARY]
+GO

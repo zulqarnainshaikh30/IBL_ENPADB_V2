@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[TWOReport_Final] (
+  [Report date] [nvarchar](30) NULL,
+  [UCIC] [varchar](30) NULL,
+  [CIF ID] [varchar](50) NULL,
+  [Customer Name] [varchar](8000) NULL,
+  [Branch Code] [varchar](20) NULL,
+  [Branch Name] [varchar](8000) NULL,
+  [Account No.] [varchar](20) NULL,
+  [Scheme Type] [varchar](20) NULL,
+  [Scheme Code] [varchar](20) NULL,
+  [Scheme Description] [varchar](200) NULL,
+  [Account Segment Code] [varchar](30) NULL,
+  [Account Segment Description] [varchar](100) NULL,
+  [Facility] [varchar](10) NULL,
+  [Nature of Facility] [varchar](50) NULL,
+  [Opening Balance] [decimal](18, 2) NOT NULL,
+  [Addition] [decimal](18, 2) NOT NULL,
+  [Increase In Balance] [decimal](19, 2) NULL,
+  [Cash Recovery] [varchar](1) NOT NULL,
+  [Recovery from NPA Sale] [varchar](1) NOT NULL,
+  [Write-off] [int] NOT NULL,
+  [Closing Balance POS] [decimal](18, 2) NOT NULL,
+  [Reduction in Balance] [decimal](19, 2) NULL,
+  [Reporting_Period] [date] NULL,
+  [DPD] [int] NOT NULL,
+  [NPA Date] [date] NULL,
+  [Asset Classification] [varchar](50) NULL,
+  [Date of Technical Write-off] [date] NULL,
+  [Host System] [varchar](50) NULL,
+  [Business Segment] [varchar](20) NULL
+)
+ON [PRIMARY]
+GO

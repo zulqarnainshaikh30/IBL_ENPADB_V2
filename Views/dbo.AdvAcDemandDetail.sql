@@ -1,0 +1,12 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+
+
+
+ CREATE VIEW [dbo].[AdvAcDemandDetail] AS (
+ SELECT * FROM CURDAT.AdvAcDemandDetail)
+
+
+
+
+GO

@@ -1,0 +1,33 @@
+﻿CREATE TABLE [CurDat].[AdvFacCreditCardDetail] (
+  [EntityKey] [bigint] NOT NULL,
+  [AccountEntityId] [int] NOT NULL,
+  [CreditCardEntityId] [int] NOT NULL,
+  [CorporateUCIC_ID] [varchar](30) NULL,
+  [CorporateCustomerID] [varchar](30) NULL,
+  [Liability] [decimal](18, 2) NULL,
+  [MinimumAmountDue] [decimal](18, 2) NULL,
+  [CD] [int] NULL,
+  [Bucket] [varchar](30) NULL,
+  [DPD] [int] NULL,
+  [RefSystemAcId] [varchar](30) NULL,
+  [AuthorisationStatus] [char](2) NULL,
+  [EffectiveFromTimeKey] [int] NOT NULL,
+  [EffectiveToTimeKey] [int] NOT NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [D2Ktimestamp] [datetime] NOT NULL,
+  [MocStatus] [char](1) NULL,
+  [MocDate] [smalldatetime] NULL,
+  [AccountStatus] [varchar](20) NULL,
+  [AccountBlkCode2] [varchar](25) NULL,
+  [AccountBlkCode1] [varchar](25) NULL,
+  [ChargeoffY_N] [char](1) NULL,
+  CONSTRAINT [AdvFacCreditCardDetail_CreditCardEntityId] PRIMARY KEY NONCLUSTERED ([AccountEntityId], [CreditCardEntityId], [EffectiveFromTimeKey], [EffectiveToTimeKey]),
+  CHECK ([EffectiveToTimeKey]=(49999))
+)
+ON [PRIMARY]
+GO

@@ -1,0 +1,3 @@
+﻿CREATE USER [D2KT\d2kuser]
+  WITHOUT LOGIN
+GO

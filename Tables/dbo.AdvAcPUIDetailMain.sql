@@ -1,0 +1,30 @@
+﻿CREATE TABLE [dbo].[AdvAcPUIDetailMain] (
+  [EntityKey] [int] IDENTITY,
+  [CustomerID] [varchar](30) NULL,
+  [UCIFID] [varchar](30) NULL,
+  [CustomerName] [varchar](100) NULL,
+  [ProjectCategoryAlt_Key] [int] NULL,
+  [ProjectSubCategoryAlt_key] [int] NULL,
+  [ProjectOwnerShipAlt_Key] [int] NULL,
+  [ProjectAuthorityAlt_key] [int] NULL,
+  [OriginalDCCO] [date] NULL,
+  [OriginalProjectCost] [decimal](16, 2) NULL,
+  [OriginalDebt] [decimal](16, 2) NULL,
+  [Debt_EquityRatio] [decimal](16, 2) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [smalldatetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [smalldatetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [smalldatetime] NULL,
+  [AccountEntityId] [int] NULL,
+  [AccountID] [varchar](50) NULL,
+  [ProjectSubCatDescription] [varchar](50) NULL,
+  [FirstLevelApprovedBy] [varchar](20) NULL,
+  [FirstLevelDateApproved] [smalldatetime] NULL
+)
+ON [PRIMARY]
+GO

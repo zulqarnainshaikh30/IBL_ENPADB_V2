@@ -1,0 +1,20 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+CREATE FUNCTIOn [dbo].[GetAccBal]
+(@AccountEntityID INT,@TimeKEy INT)
+RETURNS INT
+AS 
+BEGIN
+
+DECLARE @BAL DECIMAL(24,2)
+
+SELECT @BAL=B.Balance 
+FROm AdvAcBalanceDetail B 
+WHERE B.EffectiveFromTimeKEy<=@TimeKEy
+AND B.EffectiveToTimeKEy>=@TimeKEy 
+AND B.AccountENTITYID= @AccountEntityID
+
+RETURN @BAL
+
+END
+GO

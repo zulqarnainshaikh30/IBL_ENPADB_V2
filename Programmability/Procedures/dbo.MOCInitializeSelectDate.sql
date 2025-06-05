@@ -1,0 +1,74 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+
+
+
+CREATE PROC [dbo].[MOCInitializeSelectDate]
+AS
+
+BEGIN
+
+
+
+Declare @EXT_DATE VARCHAR(20) =(select ExtDate from SYSDATAMATRIX where CurrentStatus='C')
+--print @EXT_DATE
+DECLARE @MONTH_END_DATE VARCHAR(20)=(
+							SELECT EOMONTH(ExtDate) FROM SYSDATAMATRIX WHERE TIMEKEY=(
+												SELECT MAX(TIMEKEY)+1 FROM SYSDATAMATRIX WHERE MOC_FROZEN='Y'
+												
+																))
+
+
+--Declare  @Check_date date =(select ExtDate from SYSDATAMATRIX where ( MOC_Initialised<>'Y' OR MOC_Frozen<>'Y'))
+
+--if  @Check_date is null
+IF NOT EXISTS (SELECT 1 FROM SYSDATAMATRIX WHERE ( MOC_Initialised='Y' OR MOC_Frozen='Y') )
+     begin 
+
+	 SELECT Convert(Varchar(20),DATEADD(dd, -1, DATEADD(qq, DATEDIFF(qq, 0, @EXT_DATE), 0)),103) AS EXTDATE 
+	   
+	 end
+
+ELSE
+     BEGIN
+if   @MONTH_END_DATE < @EXT_DATE
+
+BEGIN
+
+SELECT Convert(Varchar(20),EXTDATE,103) EXTDATE FROM SYSDATAMATRIX WHERE EXTDATE=(
+							SELECT EOMONTH(ExtDate) FROM SYSDATAMATRIX WHERE TIMEKEY=(
+												SELECT MAX(TIMEKEY)+1 FROM SYSDATAMATRIX WHERE MOC_FROZEN='Y'
+												
+																)
+	) AND ISNULL(MOC_INITIALISED,'N')='N' AND ISNULL(MOC_FROZEN,'N')='N'
+
+
+
+--SELECT Convert(Varchar(20),EXTDATE,103)EXTDATE FROM SYSDATAMATRIX WHERE EXTDATE=(
+--							SELECT EOMONTH(DATE) FROM SYSDAYMATRIX WHERE TIMEKEY=(
+--												SELECT MAX(TIMEKEY)+1 FROM SYSDATAMATRIX WHERE MOC_FROZEN='Y'
+												
+--																)
+--	) AND ISNULL(MOC_INITIALISED,'N')='N' AND ISNULL(MOC_FROZEN,'N')='N'
+
+--select ExtDate,* from SYSDATAMATRIX where CurrentStatus='C'
+--select CONVERT(varchar,dateadd(d,-(day(getdate())),getdate()),103)
+
+
+END
+	ELSE
+	BEGIN
+	  SELECT DISTINCT '' EXTDATE FROM SYSDATAMATRIX
+	END
+
+	END
+END
+
+
+
+
+
+
+
+
+GO

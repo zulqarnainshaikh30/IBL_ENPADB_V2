@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[DimExtAgencyRating] (
+  [Rating_Key] [smallint] NOT NULL,
+  [RatingAlt_Key] [smallint] NULL,
+  [RatingAgencyAlt_Key] [smallint] NULL,
+  [AgencyRating] [varchar](20) NULL,
+  [EffectiveDt] [date] NULL,
+  [RiskWtAsset] [smallint] NULL,
+  [MappingRating] [varchar](8) NULL,
+  [IncCategoryShortNameEnum] [varchar](20) NULL,
+  [RatingShortName] [varchar](20) NULL,
+  [RatingShortNameEnum] [varchar](20) NULL,
+  [RatingGroup] [varchar](50) NULL,
+  [RatingSubGroup] [varchar](50) NULL,
+  [DestSysRatingAgencyNameCode] [varchar](50) NULL,
+  [RatingValidCode] [char](1) NULL,
+  [SrcSysRatingCode] [varchar](50) NULL,
+  [SrcSysAgencyRating] [varchar](50) NULL,
+  [DestSysAgencyRatingCode] [varchar](15) NULL,
+  [SecuritizedRatingFlag] [varchar](10) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifyBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp]
+)
+ON [PRIMARY]
+GO

@@ -1,0 +1,3 @@
+﻿CREATE USER [D2KT\Zulqarnain.Shaikh]
+  WITHOUT LOGIN
+GO

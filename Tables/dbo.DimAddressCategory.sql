@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[DimAddressCategory] (
+  [AddressCategory_Key] [smallint] NOT NULL,
+  [AddressCategoryAlt_Key] [smallint] NULL,
+  [AddressCategoryOrderKey] [smallint] NULL,
+  [AddressCategoryName] [varchar](50) NULL,
+  [AddressCategoryShortName] [varchar](20) NULL,
+  [AddressCategoryShortNameEnum] [varchar](20) NULL,
+  [AddressCategoryGroup] [varchar](50) NULL,
+  [AddressCategorySubGroup] [varchar](50) NULL,
+  [AddressCategorySegment] [varchar](50) NULL,
+  [IsCompulsory] [char](1) NULL,
+  [AllowMultiple] [char](1) NULL,
+  [AddressCategoryValidCode] [char](1) NULL,
+  [SrcSysAddressCategoryCode] [varchar](50) NULL,
+  [SrcSysAddressCategoryName] [varchar](50) NULL,
+  [DestSysAddressCategoryCode] [varchar](10) NULL,
+  [SubmitToCibil] [char](1) NULL,
+  [CibilCode] [varchar](5) NULL,
+  [CibilDescription] [varchar](50) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModified] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp]
+)
+ON [PRIMARY]
+GO

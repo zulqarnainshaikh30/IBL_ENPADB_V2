@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[DimAuthority] (
+  [Authority_Key] [smallint] NOT NULL,
+  [AuthorityAlt_Key] [smallint] NULL,
+  [AuthorityOrderKey] [tinyint] NULL,
+  [AuthorityName] [varchar](50) NULL,
+  [AuthorityShortName] [varchar](20) NULL,
+  [AuthorityShortNameEnum] [varchar](20) NULL,
+  [AuthorityGroup] [varchar](50) NULL,
+  [AuthoritySubGroup] [varchar](50) NULL,
+  [AuthoritySegment] [varchar](50) NULL,
+  [AuthorityValidCode] [char](1) NULL,
+  [ExaminyAuthorityGroup] [char](1) NULL,
+  [ExaminyAuthorityOrder] [smallint] NULL,
+  [SrcSysAuthorityCode] [varchar](50) NULL,
+  [SrcSysAuthorityName] [varchar](50) NULL,
+  [SrcSysAuthorityLevelCode] [varchar](50) NULL,
+  [SrcSysAuthorityLevelName] [varchar](50) NULL,
+  [DestSysAuthorityCode] [varchar](10) NULL,
+  [DestSysAuthorityLevelCode] [varchar](10) NULL,
+  [ApplicableForExtRating] [char](1) NULL,
+  [AuthorisationStatus] [varchar](2) NULL,
+  [EffectiveFromTimeKey] [int] NULL,
+  [EffectiveToTimeKey] [int] NULL,
+  [CreatedBy] [varchar](20) NULL,
+  [DateCreated] [datetime] NULL,
+  [ModifiedBy] [varchar](20) NULL,
+  [DateModifie] [datetime] NULL,
+  [ApprovedBy] [varchar](20) NULL,
+  [DateApproved] [datetime] NULL,
+  [D2Ktimestamp] [timestamp]
+)
+ON [PRIMARY]
+GO

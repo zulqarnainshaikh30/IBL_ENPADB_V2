@@ -1,0 +1,3 @@
+﻿CREATE USER [newrelic]
+  WITHOUT LOGIN
+GO

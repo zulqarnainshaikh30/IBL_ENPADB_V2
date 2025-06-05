@@ -1,0 +1,3 @@
+﻿CREATE USER [D2KT\Deepali.Phirake]
+  WITHOUT LOGIN
+GO
